@@ -104,6 +104,8 @@ let arr = [1,2];
 //         Destructuring
 //         ‘Enhanced’ object assignment (same key/value shortcut)
 
-const raceResults = (...arr) => { return {first, second, third, [...rest]}};
+function raceResults ([first, second, third, ...rest]) { 
+    return {first, second, third, rest};
+}
 
-
+const raceResults = ([first, second, third, ...rest]) => { return {first, second, third, rest}};
